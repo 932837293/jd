@@ -1,0 +1,90 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>我的计导作业</title>
+</head>
+<body>
+
+<p> #include<stdio.h</p>
+<p>#include<stdlib.h</p>
+
+<p>int average(int i,int (*p)[6])   //i为第i个课程 </p>
+<p>{</p>
+   <p>int j;</p>
+   <p>double sum=0,ave;</p>
+   
+   <p>for(j=0;jxiaoyu4;j++)</p>
+      <p>{</p>
+          <p> sum=sum+*(*(p+j)+i);</p>
+          <p> ave=sum/4; </p>          
+      
+       <p>}</p>
+       <p>printf("第%d门课程的平均分为%.2f\n\n\n\n",i,ave);</p>
+     <p>  return ave;</p>
+<p>}</p>
+
+<p>void lmysbjg(int i,int (*p)[6])     //i为第i个学生 *(*(p+i)+j)</p>
+<p>{     </p>
+   <p> int k=0,j;</p>
+  <p>  for(j=2;j<7;j++)    //第i个学生 循环五门课程 </p>
+  <p>  {
+   <p>    if((*(*(p+i)+j))<60)   k++;    </p>
+   <p> } </p>
+   <p> if(k>=2)</p>
+   <p> {
+   <p>   printf("两门以上课程不及格的学生的学号为:%d\n",*(*(p+i)));  </p> 
+     <p> printf("其全部课程成绩为:%d\t%d\t%d\t%d\t%d\t\n",</p>
+    <p>                         *(*(p+i)+1),*(*(p+i)+2),*(*(p+i)+3),*(*(p+i)+4),*(*(p+i)+5));</p>
+    <p>  printf("其平均成绩为%d\n\n",(*(*(p+i)+1)+*(*(p+i)+2)+*(*(p+i)+3)+*(*(p+i)+4)+*(*(p+i)+5))/5);</p>
+   <p> }</p>
+
+<p>}</p>
+<p>void disangehanshu(int (*p)[6])</p>
+<p>{</p>
+   <p>int i,j,k=0;</p>
+   <p>double sum=0,ave;</p>
+   <p>printf("平均成绩在90分以上或全部课程成绩在85分以上的学生有："); </p>
+   <p>for(j=0;j<4;j++)</p>
+   <p>{</p>
+    <p> for(i=1;i<6;i++)</p>
+     <p>  {</p>
+       <p>     sum=sum+*(*(p+j)+i);</p>
+      <p>      ave=sum/5;           </p>
+     <p>  	    if(*(*(p+j)+i)>=85)</p>
+     <p>  	    k++;</p>
+       	    
+	 <p>  }</p>
+	 <p>  if(ave>=90||k>=2)</p>
+	 <p>  printf("%d  ",**(p+j)); </p>
+	  <p> k=0;</p>
+	 <p>  sum=0;	</p>
+   <p> }</p>
+<p>}
+</p>
+<p>int main()</p>
+<p>{</p>
+  <p>  int i,j,n;</p>
+   <p> void average(int i,int (*p)[6]);</p>
+  <p>  void lmysbjg(int i,int (*p)[6]);</p>
+  <p>  int a[4][6]={{1,99,96,95,93,90},{2,100,64,95,87,74},{3,56,87,43,76,91},{4,79,49,32,98,60}};</p>
+
+	<p>int (*p)[6];</p>
+   <p> p=a;    </p>
+   <p> printf("第一门课程的平均分:");</p>
+   <p> average(1,a); </p>
+    
+   <p> for(i=0;i<4;i++)</p>
+   <p>   lmysbjg(i,a);</p>
+      
+   <p> disangehanshu(a);</p>
+    
+   <p> system("pause");</p>
+   <p> return 0;</p>
+<p>}    </p>
+    
+
+
+</body>
+</html>
