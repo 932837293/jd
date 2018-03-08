@@ -2,20 +2,34 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>测你与另一半的缘分</title>
 </head>
 <body>
-    <p>请输入你的名字</p>
+ 
+	<p>请输入你的名字</p>
 	<input type="text" id="first">
-    <p>请输入另一半的名字</p>
+	<p>请输入另一半的名字</p>
 	<input type="text" id="second">
-	<button type="submit" onclick="demo()">点击判断</button>
+	<button type="button" onclick="demo()">点击判断</button>
 	<script>
-	     var a=document.getElementById("first");
-         	 var b=document.getElementById("second");
-         function demo(){
-            alert(a.value+"和"+b.value+"是天生一对");
-         }
-	</script>
+	
+		
+		var a=document.getElementById("first");
+		var b=document.getElementById("second");
+		function demo(){
+		var c=Math.random()*10
+			if(c<3){
+			alert(a.value+"和"+b.value+"天造地设的一对")}
+			else if(c>=3&&c<6){
+			alert(a.value+"和"+b.value+"会爱到至死不渝")}
+			else if(c>=6){
+			alert(a.value+"和"+b.value+"会天长地久")}
+    		alert("请刷新页面")
+			}
+			
+		
+    </script>
+
+									
 </body>
 </html>
