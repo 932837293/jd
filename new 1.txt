@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zn-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title></title>
+<style type="text/css">
+#login{
+height: 100px;
+width: 100px;
+border: 1px solid black;
+position: relative;
+top:200px;
+left: 200px;
+background: red;
+}
+</style>
+</head>
+<body>
+<div id="login"></div>
+<script type="text/javascript">
+var oDiv = document.getElementById("login");
+oDiv.onmousedown = function(e){
+var e = e || window.event;//window.event兼容IE,当事件发生时有效
+var diffX = e.clientX - oDiv.offsetLeft;//获取鼠标点击的位置到所选对象的边框的水平距离
+var diffY = e.clientY - oDiv.offsetTop;
+document.onmousemove = function(e){ //需设为document对象才能作用于整个文档
+var e = e||window.event;
+oDiv.style.left = e.clientX - diffX + 'px';//style.left表示所选对象的边框到浏览器左侧距离
+oDiv.style.top = e.clientY -diffY + 'px';
+};
+document.onmouseup = function(){
+document.onmousemove = null;//清除鼠标释放时的对象移动方法
+document.onmouseup = null;
+}
+}
+</script>
+</body> 
+</html>
