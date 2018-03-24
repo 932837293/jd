@@ -94,7 +94,7 @@
 {
 	-moz-background-size:100% 100%; 
 	background-size:100% 100%;
-	background-image:url(dnf.jpg);
+	background-image:url(img/dnf.jpg);
 
 }
 .pagination {
@@ -309,9 +309,9 @@
 	<div id="one" style="width:100%;hight:100px;margin-top: 15px"><p style="width:200px;float:left;color:cadetblue">Name:</p><input type="text" style="float:left;width:160px;"></div><br>
 	<div id="two" style="width:100%;hight:100px;margin-top: 15px"><p style="width:200px;float:left;color:cadetblue">Wechat:</p><input type="text" style="width:160px;float:left;"></div>
 	<br>
-	<div id="three" style="width:100%;hight:100px;margin-top: 15px"><p style="width:200px;float:left;color:cadetblue">Tel:</p><input type="text" style="width:160px;float:left;"></div><br>
+	<div id="three" style="width:100%;hight:100px;margin-top: 15px"><p style="width:200px;float:left;color:cadetblue">Tel:</p><input id="submittel" type="text" style="width:160px;float:left;"></div><br>
 	<div id="four" style="width:100%;hight:100px;margin-top: 15px"><p style="width:200px;float:left;color:cadetblue">What's wrong:</p><input type="text" style="width:160px;float:left;"></div>
-	<div id="five" style="width:100%;hight:100px;margin-top: 15px"><button type="submit" onclick="submit()">提交</button></div>
+	<div id="five" style="width:100%;hight:100px;margin-top: 15px"><button id="submitbut" type="submit" onclick="submit()">提交</button></div>
     </div>
  </div>
     
@@ -355,9 +355,18 @@
   } 
 
   function submit(){
-	  alert("We will take sometime to chat with you!")
+	  var value = document.getElementById("submittel").value;
+	 if (value == '' || value == undefined || value == null)
+	   		{
+		  alert("Please enter you Tel!");
+			location.reload();	
+	   		}
+	  else {
+		  alert("We will take sometimes to contact with you!")
+	  }
+	 
   }
- 
+  
 /*window.onload=function(){
             
 	var moretag = document.getElementById("more");
