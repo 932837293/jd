@@ -18,7 +18,7 @@
   color: #fff;
   background: #222;
   text-align: center;
-		 border-top: 1px outset white;
+		 border-top: 0px outset white;
  	border-bottom: 1px outset white;
 }
 .swiper-slide {
@@ -140,8 +140,9 @@
     height:700px;
     width:100%;
     float:left;
-	background-image:url(img/gbimg3.jpg);
-	background-size:100% 130%
+	/*background-image:url(img/newsbgimg1.jpg);*/
+	background-color: #222;
+	background-size:100% 100%
 }
 	a{
 		text-decoration:none;
@@ -227,20 +228,20 @@
 #portfolio
 	{
 		background-color:#222;
-		border-top: 1px ridge black;
+		border-top: 0px ridge black;
 	}
 #contactframe{
 		float:left;
-	    height:360px;
+	    height:600px;
 	    width:100%;
-    	background-image: url(img/contactbgimg.png);
+    	background-image: url(img/gbimg3.jpg);
 	    background-repeat:round;
 	}	
 	
 	
 #contact{
 			 border: 1px outset black;
-		margin:50px auto 0 auto;
+		margin:150px auto 0 auto;
 	}
 #dashangbutton{
 	margin-top:15px;
@@ -284,10 +285,10 @@
 	<a href="http://ol.gamersky.com/z/poe/" target="_blank"><div id="news6" class="boxdown"><div id="inner"><p style="color:black">Path of Exile</p></div></div></a>
 	<a href="http://shouyou.gamersky.com/z/paj/" target="_blank"><div id="news7" class="boxdown"><div id="inner"><p style="color:black">决战平安京</p></div></div></a>
 	<a href="http://www.gamersky.com/z/ark/" target="_blank"><div id="news8" class="boxdown"><div id="inner"><p style="color:black">ARK:Survive Evolved</p></div></div></a>
-	<div id="more" onmouseover="moretag()"><a href="http://www.gamersky.com/" target="_blank">more</a></div>
+	<div id="more" onmouseover="moretag()"><a href="http://www.gamersky.com/" target="_blank">..more</a></div>
 </div>
 <div id="portfolio" style="width:100%;height:500px;float:left;text-align: center">
-	<h1 style="color:white">PORTFOLIO<h5 style="color:white;text-align: center">鼠标可拖拽黑布滑动</h5></h1>
+	<h1 style="color:white">CANVAS<h5 style="color:black;text-align: center">鼠标可拖拽黑布滑动</h5></h1>
 	<div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide slide1">
@@ -311,14 +312,14 @@
       </div>
     </div>
 <div id="contactframe">  
-    <div id="contact" style="width:30%;height:250px;background-color:white;">
+    <div id="contact" style="width:30%;height:350px;background-color:white;"><br><br><br>
 	<h1 style="color:black;text-align: center">CONTACT US</h1>
 	<div id="one" style="width:100%;hight:100px;margin-top: 15px"><p style="width:200px;float:left;color:cadetblue">Name:</p><input type="text" style="float:left;width:160px;"></div><br>
 	<div id="two" style="width:100%;hight:100px;margin-top: 15px"><p style="width:200px;float:left;color:cadetblue">Wechat:</p><input type="text" style="width:160px;float:left;"></div>
 	<br>
 	<div id="three" style="width:100%;hight:100px;margin-top: 15px"><p style="width:200px;float:left;color:cadetblue">Tel:</p><input id="submittel" type="text" style="width:160px;float:left;"></div><br>
 	<div id="four" style="width:100%;hight:100px;margin-top: 15px"><p style="width:200px;float:left;color:cadetblue">What's wrong:</p><input type="text" style="width:160px;float:left;"></div>
-	<div id="five" style="width:100%;hight:100px;margin-top: 15px"><button id="submitbut" type="submit" onclick="submit()">提交</button></div>
+	<br><div id="five" style="width:100%;hight:100px;margin-top: 15px"><button id="submitbut" type="submit" onclick="submit()">提交</button></div>
     </div>
     <div id="dashang"><a href="erweima.html"><button id="dashangbutton" type="button"></button></a></div>
  </div>
@@ -359,7 +360,7 @@
   })
 
   function demo(){
-  	document.getElementById("homebg").src="img/logo.png";
+  	document.getElementById("homebg").src="img/contactbgimg.png";
   } 
 
   function submit(){
